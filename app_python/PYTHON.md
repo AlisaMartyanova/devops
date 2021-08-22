@@ -28,3 +28,11 @@ Python WSGI HTTP Server for UNIX. It is generally easiest to just install Gunico
 * #### Pylint
 
 Python static code analysis tool which looks for programming errors, helps enforcing a coding standard, sniffs for code smells and offers simple refactoring suggestions.
+
+* #### Exclude with .gitignore
+
+To exclude extra files (without restructuring your source repository) use a `.gitignore` file.
+
+* #### Requirements
+
+Use `requirements.txt` file to specify python packages and their versions that are required to run the project.
