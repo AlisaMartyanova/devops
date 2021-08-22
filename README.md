@@ -32,14 +32,25 @@ This is a simple Python web application (with flask), that shows current time in
 
 ## INSTALLATION
 
-### Locally
+### Locally from virtualenv
 
-* Clone the repository `https://github.com/AlisaMartyanova/devops.git`.
-* Cd to the `app_python` folder from command line.
-* Run `sh local_run.sh` script from command line.
+Open command line and run the following commands:
 
-### From Dockerhub
+* `git clone https://github.com/AlisaMartyanova/devops.git`
+* `cd devops/app_python`
+* `sh local_run.sh`                   # run the application on _localhost:5000_
 
-* Run `docker run -p 80:80 lissa00/devops:time-app` command from command line.
+### Locally with docker (building image manually)
 
+Open command line and run the following commands:
 
+* `git clone https://github.com/AlisaMartyanova/devops.git`
+* `cd devops/app_python`
+* `docker build -t name[:tag] .`      # build docker image with application
+* `docker run -d -p 80:80 name[:tag]` # run image with application on backgroud on _0.0.0.0:80_
+
+### Locally from Dockerhub (take ready image)
+
+Open command line and run the following commands:
+
+* `docker run -d -p 80:80 lissa00/devops:time-app` 
