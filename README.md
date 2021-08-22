@@ -1,4 +1,4 @@
-## CONTENTS OF THIS FILE
+## TABLE OF CONTENT
 
  * Application overview
  * Project structure
