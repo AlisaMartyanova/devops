@@ -26,3 +26,6 @@ Whenever possible, use current official images as the basis for your images. It 
 
 Split long or complex `RUN` statements on multiple lines separated with backslashes to make your `Dockerfile` more readable, understandable, and maintainable.
 
+* #### Linter for Dockerfile (Red Hat)
+
+Linter for dockerfile allows you to check basic dockerfile syntax and also allows you to check that a dockerfile follows best practices according to a selected profile. A profile defines the set of rules that a file is checked against.
