@@ -22,7 +22,7 @@ This is a simple Python web application (with flask), that shows current time in
     │   ├── docker_run.sh       # Run app from docker
     │   ├── local_run.sh        # Run app locally
     │   └── requirements.txt               
-    └──
+    └── README.md
     
 ## REQUIREMENTS
 
