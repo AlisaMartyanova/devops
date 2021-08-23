@@ -13,6 +13,8 @@ This is a simple Python web application (with flask), that shows current time in
 
 
     ├── app_python              # Application folder
+    │   ├── templates           # Html templates
+            └── ...
     │   ├── .dockerignore        
     │   ├── .gitignore         
     │   ├── DOCKER.md           # Docker best practices
