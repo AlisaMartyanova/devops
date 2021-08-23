@@ -54,4 +54,4 @@ Open command line and run the following commands:
 
 Open command line and run the following commands:
 
-* `docker run -d -p 8000:8000 lissa00/devops:latest
+* `docker run -d -p 8000:8000 lissa00/devops:latest`
