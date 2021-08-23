@@ -1,15 +1,16 @@
 FROM python:3.6.12-alpine
 
-# We copy just the requirements.txt first to leverage Docker cache
-COPY ./requirements.txt /app/requirements.txt
-
 WORKDIR /app
 
-RUN pip3 install -r requirements.txt && \
-    pip3 install gunicorn
+RUN adduser -D alice
 
-COPY . /app
+COPY requirements.txt .
 
-ENTRYPOINT [ "sh" ]
+RUN pip3 install --no-cache-dir -r requirements.txt
 
-CMD [ "docker_run.sh" ]
+COPY app.py .
+COPY templates/ ./templates/
+
+USER alice
+
+ENTRYPOINT [ "gunicorn", "-b", "0.0.0.0:8000", "app:app"]

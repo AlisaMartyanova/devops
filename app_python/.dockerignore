@@ -1,3 +1,6 @@
 *.md
 local_run.sh
+.gitignore
+venv
+__pycache__
 
