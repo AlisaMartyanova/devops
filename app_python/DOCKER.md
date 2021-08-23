@@ -26,6 +26,14 @@ Whenever possible, use current official images as the basis for your images. It 
 
 Split long or complex `RUN` statements on multiple lines separated with backslashes to make your `Dockerfile` more readable, understandable, and maintainable.
 
-* #### Linter for Dockerfile (Red Hat)
+* #### Linting
 
-Linter for dockerfile allows you to check basic dockerfile syntax and also allows you to check that a dockerfile follows best practices according to a selected profile. A profile defines the set of rules that a file is checked against.
+Tools like Haskell Dockerfile Linter (hadolint) can detect bad practices in your Dockerfile, and even expose issues inside the shell commands executed by the RUN instruction. 
+
+* #### Rootless containers
+
+Avoid running containers with root user for security reasons.
+
+* #### COPY
+
+Avoid commands like `COPY . /my-app`, try to copy only necessary files.
