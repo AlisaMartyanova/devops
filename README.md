@@ -4,6 +4,7 @@
  * Project structure
  * Requirements
  * Install and run app
+ * Tests
  
 ## APPLICATION OVERVIEW
  
@@ -13,15 +14,18 @@ This is a simple Python web application (with flask), that shows current time in
 
 
     ├── app_python              # Application folder
-    │   ├── templates           # Html templates
+    │   ├── templates           # Folder with Html templates
+    │   │   └── ...
+    │   ├── test                # Folder with tests
     │   │   └── ...
     │   ├── .dockerignore              
     │   ├── DOCKER.md           # Docker best practices
     │   ├── Dockerfile     
     │   ├── PYTHON.md           # Python (web) best practices
     │   ├── app.py              # Application
-    │   ├── local_run.sh        # Run app locally
-    │   └── requirements.txt    # Python packages required to the project.    
+    │   ├── local_run.sh        # Script to run app locally in venv
+    │   ├── requirements.txt    # Python packages required to the project. 
+    │   └── test.sh             # Script to run tests
     ├── .gitignore   
     └── README.md
     
@@ -55,3 +59,11 @@ Open command line and run the following commands:
 Open command line and run the following commands:
 
 * `docker run -d -p 8000:8000 lissa00/devops:latest`
+
+## TESTS
+
+To run tests open command line and run the following commands:
+
+* `git clone https://github.com/AlisaMartyanova/devops.git`
+* `cd devops/app_python`
+* `sh test.sh`
