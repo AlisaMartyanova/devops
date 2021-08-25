@@ -5,6 +5,7 @@
  * Requirements
  * Install and run app
  * Tests
+ * Workflow
  
 ## APPLICATION OVERVIEW
  
@@ -67,5 +68,7 @@ To run tests open command line and run the following commands:
 * `git clone https://github.com/AlisaMartyanova/devops.git`
 * `cd devops/app_python`
 * `sh test.sh`
+
+## WORKFLOW STATUS
 
 [![CI to Docker Hub](https://github.com/AlisaMartyanova/devops/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/AlisaMartyanova/devops/actions/workflows/main.yml)
