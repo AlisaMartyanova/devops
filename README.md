@@ -67,5 +67,3 @@ To run tests open command line and run the following commands:
 * `git clone https://github.com/AlisaMartyanova/devops.git`
 * `cd devops/app_python`
 * `sh test.sh`
-
-![example workflow](https://github.com/AlisaMartyanova/devops/blob/master/.github/workflows/main.yml/badge.svg)
