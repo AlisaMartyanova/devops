@@ -36,3 +36,33 @@ To exclude extra files (without restructuring your source repository) use a `.gi
 * #### Requirements
 
 Use `requirements.txt` file to specify python packages and their versions that are required to run the project.
+
+## Python unit testing practices
+
+* #### Tests Should Be Fast
+
+Do everything within your power to make your tests fast. If they’re slow, developers won’t run them as often as they should. To make them as fast as possible make them simple, don’t make them depend on other tests.
+
+* #### Test Shouldn’t Duplicate Implementation Logic
+
+The test code shoud not be a copy of the implementation code. If implementation is wrong, the test will not show it.
+
+* #### Tests Should Be Readable
+
+If tests are hard to read, developers are more likely to misunderstand them and introduce bugs. 
+
+* #### Tests Should Be Deterministic
+
+The test should always present the same behavior if no changes were made to the code under test.
+
+* #### Behavior
+
+Parametrize the same behavior, have different tests for different behaviors. Never loop over test cases inside a test – it stops on first failure and gives less information than running all test cases.
+
+* #### Pytest
+
+Framework to write simple and scalable tests.
+
+## Pytest
+
+To write unit tests for my application I used _pytest_ library. `app_python/test/unit/webapp/test_app.py` contains two unit tests: `test_landing_code` to test if the page loads successfully, and `test_landing_content` to test if the page displays the right content. `test.sh` contains script to run tests. 
