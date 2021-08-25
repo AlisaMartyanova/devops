@@ -63,6 +63,8 @@ Open command line and run the following commands:
 
 ## TESTS
 
+Tests are done with _pytest_ library. They are located in the `app_python/test` folder.
+
 To run tests open command line and run the following commands:
 
 * `git clone https://github.com/AlisaMartyanova/devops.git`
