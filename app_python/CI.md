@@ -33,3 +33,31 @@ Prevent polluting the global environment context as much as possible by always d
 * #### Authors
 
 Store authors in Action metadata to promote code ownership to be in charge of maintaining the action and answer questions about it.
+
+## CI practices for Jenkins
+
+* #### Keep Jenkins Secure At All Times
+
+Jenkins does not perform any security checks within the default configuration. This implies that any user accessing the website can execute any random code on the Jenkins master. It is recommended to secure Jenkins and configure the ‘Configure Global Security’ option. 
+
+* #### Always Backup The “JENKINS_HOME” Directory
+
+Jenkins home directory contains lots of data, including job configurations, build logs, plugin configs, etc. that we cannot afford to lose. This can be accomplished through plugins offered by Jenkins or configuring a job to take backup. 
+
+* #### Setup A Different Job/Project For Each Maintenance Or Development Branch Created
+
+Setting up different jobs/projects for each branch helps you support parallel development efforts and maximize the advantage of sleuthing issues, thereby reducing risk and allowing developers to be more productive.
+
+* #### Build A Scalable Jenkins Pipeline
+
+Shared Libraries offer a version-controlled Pipeline code that can be stored and accessed from your source control management compared to a common programming library. 
+
+* #### Manage Declarative Syntax/Declarative Pipelines
+
+Declarative Pipelines configuration tells a system what to do, shifting the complexity of ‘how to do’ to the system.
+
+* #### Monitor Your CI/CD Pipeline
+
+Having a broken CI/CD pipeline can potentially stall your development team. Also, external dependencies like cloud services, network, testing services might affect your CI/CD pipeline, and you need to know when these occasional failures become significant enough to warrant action.
+
+
