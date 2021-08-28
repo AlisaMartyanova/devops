@@ -52,7 +52,7 @@ jobs:
         run:
           pip install -r ./app_python/requirements.txt
       - name: Test with pytest
-        run:
+        run: |
           pip install pytest
           pip install pytest-cov
           pytest ./app_python/test/unit/webapp/test_app.py
