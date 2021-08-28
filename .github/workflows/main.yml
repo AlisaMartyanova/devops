@@ -55,7 +55,7 @@ jobs:
         run:
           pip install pytest
           pip install pytest-cov
-          pytest ./app_python/test/unit/webapp/test_app.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
+          pytest ./app_python/test/unit/webapp/test_app.py
           
       - name: Build and push
         id: docker_build
