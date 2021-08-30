@@ -1,10 +1,11 @@
-node {
-  stage('Build image') {
-    sh "cd ./app_python && docker build -t lissa00/devops:latest ."
-  }
+pipeline {
+  stages {
+    stage('Install dependences') {
+      sh "cd ./app_python && pip install -r requirements.txt"
+    }
 
-  stage('Push image') {
-    sh "docker push lissa00/devops:latest"
+    stage('Test') {
+      sh "sh test.sh"
+    }
   }
-  
 }
