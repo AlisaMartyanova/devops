@@ -1,8 +1,6 @@
 node {
   stage('Build image') {
-    dir('app_python'){
-      sh "ls && docker build -t lissa00/devops:latest ."
-    }
+    sh "cd ./app_python && docker build -t lissa00/devops:latest ."
   }
 
   stage('Push image') {
