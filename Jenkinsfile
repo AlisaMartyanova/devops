@@ -1,7 +1,5 @@
 pipeline {
-  agent {
-    docker { image 'python:3.6.12-alpine'}
-  }
+  agent any
   stages {
     stage('Install dependences') {
       steps {
