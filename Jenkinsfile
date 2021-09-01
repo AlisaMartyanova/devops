@@ -16,8 +16,5 @@ pipeline {
         sh "sh test.sh"
       }
     }
-    stage('Build') {
-    
-    }
   }
 }
