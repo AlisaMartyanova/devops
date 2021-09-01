@@ -3,10 +3,14 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        sh '''
-          cd ./app_python
-          sh test.sh
-          '''
+        withPythonEnv('python3') {
+          sh '''
+            cd ./app_python
+            pip install -r requirements.txt
+            pip install pytest
+            python -m pytest
+            '''
+        }
       }
     }
   }
