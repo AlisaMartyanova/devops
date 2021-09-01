@@ -1,6 +1,6 @@
 import pytest
 from app_python.app import app
-# from flaskr import create_app
+
 
 """Initialize the testing environment
 
@@ -8,6 +8,7 @@ Creates an app for testing that has the configuration flag ``TESTING`` set to
 ``True``.
 
 """
+
 
 @pytest.fixture
 def client():
@@ -17,8 +18,7 @@ def client():
 
     :return: App for testing
     """
-    # app = create_app()
-    #app.config['TESTING'] = True
+   
     client = app.test_client()
-
     yield client
+    
