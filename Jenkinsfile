@@ -1,19 +1,15 @@
 pipeline {
-  agent {
-    docker {
-      image 'python:3.6.12-alpine'
-    }
-  }
+  agent any
   stages {
-    stage('Install dependences') {
-      steps {
-        sh "cd ./app_python && pip install -r requirements.txt"
-      }
-    }
-
     stage('Test') {
       steps {
-        sh "sh test.sh"
+        sh '''
+          cd ./app_python
+          virtualenv venv --distribute
+          . venv/bin/activate 
+          pip install -r requirements.txt
+          sh test.sh
+          '''
       }
     }
   }
