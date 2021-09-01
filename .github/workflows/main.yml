@@ -52,14 +52,13 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r ./app_python/requirements.txt
-          pip install black flake8
+          pip install black
           
       - name: Run linters
         uses: wearerequired/lint-action@v1
         with:
           context: ./app_python
           black: true
-          flake8: true
           
       - name: Test with pytest
         run: |
