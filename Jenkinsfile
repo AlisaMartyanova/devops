@@ -2,20 +2,18 @@ pipeline {
   agent any
   stages {
     stage('Test') {
-      steps {
-        virtualenv {
-            name('venv')
-            command('pip install -r requirements.txt && pip install pytest && python -m pytest')
-            clear()
+      agent {
+        docker {
+          image 'python:3.6.12-alpine'
         }
-//         sh '''
-//           cd ./app_python
-//           . .env/bin/activate
-//           pip install -r requirements.txt
-//           pip install pytest
-//           python -m pytest
-//           deactivate
-//           '''
+      }
+      steps {
+        sh '''
+          cd ./app_python
+          pip install -r requirements.txt
+          pip install pytest
+          python -m pytest
+          '''
       }
     }
   }
