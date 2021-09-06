@@ -1,0 +1,16 @@
+- name: Create directory
+  file:
+    path: "{{app_python_dir_path}}"
+    state: directory
+    mode: 0775
+    recurse: yes
+
+- name: Copy docker-compose.yml
+  copy:
+    src: ./docker-compose.yml
+    dest: "{{app_python_dir_path}}/docker-compose.yml"
+
+- name: Start service
+    docker_service:
+    project_src: "{{app_python_dir_path}}"
+

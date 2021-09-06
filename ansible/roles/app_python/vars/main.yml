@@ -1,0 +1,3 @@
+app_python_dir_path: /opt/app_python
+docker-compose_image_repo: lissa00/devops
+docker-compose_image_tag: latest
