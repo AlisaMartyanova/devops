@@ -12,3 +12,4 @@ def test_landing_content(client):
     html = landing.data.decode()
 
     assert str(get_moscow_time().strftime("%H:%M:%S")) in html
+    
