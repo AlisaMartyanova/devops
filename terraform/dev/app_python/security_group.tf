@@ -1,6 +1,6 @@
 resource "aws_security_group" "http" {
   name        = "http"
-  description = "Allow HTTP" traffic
+  description = "Allow HTTP traffic"
 
   ingress = [
     {
