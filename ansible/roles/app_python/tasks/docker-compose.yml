@@ -4,7 +4,7 @@ services:
     build: ../../../../app_python
     ports:
       - 8000:8000
-    image: lissa00/devopscd:latest
+    image: lissa00/devops:latest
 
     logging:
       driver: "json-file"
