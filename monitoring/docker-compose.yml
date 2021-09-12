@@ -30,5 +30,16 @@ services:
     networks:
       - loki
 
+  prometheus:
+    image: prom/prometheus:v2.29.2
+    volumes:
+      - prometheus_data:/prometheus
+      - ./prometheus-conf.yml:/etc/prometheus/prometheus.yml:ro
+    ports:
+      - "9090:9090"
+    networks:
+      - loki
+
 volumes:
   grafana-storage:
+  prometheus_data:

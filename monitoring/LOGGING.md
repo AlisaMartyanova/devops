@@ -11,6 +11,19 @@
 
 Loki shows logs by container id. 
 
-![alt text](./images/loki.png)
+![](./images/loki.png)
 
+\
+Targets dashboard
 
+![](./images/targets.png)
+
+\
+Dashboard in Grafana for Loki
+
+![](./images/loki-2_0.png)
+
+\
+Dashboard in Grafana for Prometheus
+
+![](./images/prometheus-2_0.png)
