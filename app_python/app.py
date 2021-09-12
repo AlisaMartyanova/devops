@@ -2,6 +2,7 @@ from datetime import datetime
 import pytz
 from flask import Flask, render_template
 
+
 app = Flask(__name__)
 
 
@@ -13,6 +14,7 @@ def get_moscow_time():
 
 @app.route("/")
 def index():
+    app.logger.warning("It is a test warning!")
     return render_template("template.html", time=get_moscow_time().strftime("%H:%M:%S"))
 
 

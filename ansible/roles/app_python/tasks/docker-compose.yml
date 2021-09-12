@@ -4,4 +4,11 @@ services:
     build: ../../../../app_python
     ports:
       - 8000:8000
-    image: {{docker-compose_image_repo}}:{{docker-compose_image_tag}}
+    image: lissa00/devopscd:latest
+
+    logging:
+      driver: "json-file"
+      options:
+        tag: "{{.ImageName}}|{{.Name}}|{{.ImageFullID}}|{{.FullID}}"
+
+
