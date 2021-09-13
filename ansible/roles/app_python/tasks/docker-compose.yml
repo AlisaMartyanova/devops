@@ -13,3 +13,8 @@ services:
         max-size: "200k"
         max-file: "10"
 
+    deploy:
+      resources:
+        limits:
+          cpus: "0.001"
+          memory: 50M
