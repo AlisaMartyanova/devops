@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   app_python:
-    build: ../../../../app_python
+    build: ""
     ports:
       - 8000:8000
     image: lissa00/devops:latest

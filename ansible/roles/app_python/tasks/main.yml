@@ -7,7 +7,7 @@
 
 - name: Copy docker-compose.yml
   copy:
-    src: ./docker-compose.yml
+    src: ../../../../app_python/docker-compose.yml
     dest: "{{app_python_dir_path}}/docker-compose.yml"
 
 - name: Start service
