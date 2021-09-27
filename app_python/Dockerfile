@@ -12,6 +12,8 @@ COPY app.py .
 COPY files/ ./files/
 COPY templates/ ./templates/
 
+RUN chmod a+w ./files/file.txt
+
 EXPOSE 8000
 
 USER alice
