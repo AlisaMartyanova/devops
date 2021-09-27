@@ -62,9 +62,7 @@ jobs:
           
       - name: Test with pytest
         run: |
-          pip install pytest
-          pip install pytest-cov
-          pytest ./app_python/test/unit/webapp/test_app.py
+          sh ./app_python/test.sh
           
       - name: Build and push
         id: docker_build
