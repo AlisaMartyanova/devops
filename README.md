@@ -1,7 +1,6 @@
 ## TABLE OF CONTENT
 
  * Application overview
- * Project structure
  * Requirements
  * Install and run app
  * Tests
@@ -10,25 +9,9 @@
 ## APPLICATION OVERVIEW
  
 This is a simple Python web application (with flask), that shows current time in Moscow. The time is updated with a page refreshing.
+By accessing the root page `/` application wites to a `files/file.txt` the following message `"accessed at [time]"`. 
+By accessing the `/visits` application reads the content of `files/file.txt` and shows it at this page.
 
-## PROJECT STRUCTURE
-
-
-    ├── app_python              # Application folder
-    │   ├── templates           # Folder with Html templates
-    │   │   └── ...
-    │   ├── test                # Folder with tests
-    │   │   └── ...
-    │   ├── .dockerignore              
-    │   ├── DOCKER.md           # Docker best practices
-    │   ├── Dockerfile     
-    │   ├── PYTHON.md           # Python (web) best practices
-    │   ├── app.py              # Application
-    │   ├── local_run.sh        # Script to run app locally in venv
-    │   ├── requirements.txt    # Python packages required to the project. 
-    │   └── test.sh             # Script to run tests
-    ├── .gitignore   
-    └── README.md
     
 ## REQUIREMENTS
 
