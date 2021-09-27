@@ -20,4 +20,4 @@ services:
           memory: 50M
 
     volumes:
-      - ../../../../app_python/files/file.txt:./files/file.txt
+      - ./files:./files
