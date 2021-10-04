@@ -26,7 +26,7 @@ def read_from_file(filename):
 def index():
     app.logger.warning("It is a test warning!")
     time = get_moscow_time().strftime("%H:%M:%S")
-    content = "accessed at " + time + "\n"
+    content = "accessed at " + str(get_moscow_time()) + "\n"
     write_to_file("files/file.txt", content)
     return render_template("template.html", time=time)
 
