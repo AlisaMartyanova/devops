@@ -1,4 +1,5 @@
 replicaCount: 3
+podManagementPolicy: Parallel
 
 image:
   repository: lissa00/devops
@@ -65,4 +66,5 @@ affinity: {}
 
 secret:
   name: credentials
+
   password: 'password'
